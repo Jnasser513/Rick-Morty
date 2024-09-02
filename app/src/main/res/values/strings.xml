@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">RickAndMorty</string>
+    <string name="error_request_timeout">La respuesta excedio el tiempo limite</string>
+    <string name="error_too_many_request">Excediste el limite de peticiones</string>
+    <string name="error_no_internet">Porfavor, verifica tu conección a internet</string>
+    <string name="error_server_error">Algo salio mal, porfavor intenta de nuevo</string>
+    <string name="error_error_serialization">Lo siento, no pudimos convertir los datos</string>
+    <string name="error_unknown">Ocurrio un error desconocido</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.jnasser.rickandmorty.ui.theme
+package com.jnasser.rickandmorty.core.presentation.designsystem
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
