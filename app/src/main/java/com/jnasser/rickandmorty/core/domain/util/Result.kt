@@ -1,5 +1,10 @@
 package com.jnasser.rickandmorty.core.domain.util
 
+/*
+    Manejo de resultados por error o success
+    D: envio de data cuando Result es Success
+    E: Envio de tipo error cuando Result es Error
+ */
 sealed interface Result<out D, out E: Error> {
     data class Success<out D>(val data: D): Result<D, Nothing>
     data class Error<out E: com.jnasser.rickandmorty.core.domain.util.Error>(val error: E): Result<Nothing, E>
