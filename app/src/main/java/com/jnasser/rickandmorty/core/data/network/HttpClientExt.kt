@@ -1,4 +1,4 @@
-package com.jnasser.rickandmorty.core.data
+package com.jnasser.rickandmorty.core.data.network
 
 import com.jnasser.rickandmorty.BuildConfig
 import com.jnasser.rickandmorty.core.domain.util.DataError
