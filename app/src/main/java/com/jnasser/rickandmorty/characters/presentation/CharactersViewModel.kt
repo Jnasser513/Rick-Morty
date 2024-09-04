@@ -8,6 +8,10 @@ import androidx.lifecycle.viewModelScope
 import com.jnasser.rickandmorty.characters.domain.CharactersRepository
 import com.jnasser.rickandmorty.core.domain.util.Result
 import com.jnasser.rickandmorty.core.domain.util.map
+import com.jnasser.rickandmorty.core.presentation.ui.UiText
+import com.jnasser.rickandmorty.core.presentation.ui.asUiText
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
@@ -18,11 +22,17 @@ class CharactersViewModel(
     var state by mutableStateOf(CharacterListViewState())
         private set
 
+    private val eventChannel = Channel<CharacterListEvent>()
+    val events = eventChannel.receiveAsFlow()
+
     init {
         viewModelScope.launch {
             val result = charactersRepository.getRemoteCharacters().map { it.results }
             state = when(result) {
-                is Result.Error -> state.copy(isLoading = false)
+                is Result.Error -> {
+                    eventChannel.send(CharacterListEvent.Error(result.error.asUiText()))
+                    state.copy(isLoading = false)
+                }
                 is Result.Success -> state.copy(isLoading = false, characters = result.data)
             }
         }
