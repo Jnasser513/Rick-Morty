@@ -6,4 +6,12 @@
     <string name="error_server_error">Algo salio mal, porfavor intenta de nuevo</string>
     <string name="error_error_serialization">Lo siento, no pudimos convertir los datos</string>
     <string name="error_unknown">Ocurrio un error desconocido</string>
+    <string name="character_image">Character Image</string>
+    <string name="error_couldnt_load_image">No se pudo cargar la imagen</string>
+    <string name="character_name">Nombre de personaje</string>
+    <string name="favorite">Favorite</string>
+    <string name="status">Estado</string>
+    <string name="species">Especie</string>
+    <string name="type">Tipo</string>
+    <string name="gender">Genero</string>
 </resources>
