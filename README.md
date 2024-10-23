@@ -15,7 +15,7 @@ https://github.com/user-attachments/assets/514e9bad-626d-4e8e-87cb-9f841f0a38e7
 ![Captura de Pantalla 2024-09-04 a la(s) 12 20 12](https://github.com/user-attachments/assets/edc53484-44c4-43c0-b3fb-eb5ed6d52f48)
 
 # Explicacion del proyecto
-El proyecto se dividio por features y una carpeta core,
+El proyecto se dividio por features y una carpeta core, 
 cada carpeta equivale a un feature y dentro de cada feature encontraremos 3 carpetas principales (domain, data y presentation).
 
 Comenzando con la capa de core en esta se encuentran recursos que se utilizaran dentro de toda la aplicacion y seran reutilizables, 
